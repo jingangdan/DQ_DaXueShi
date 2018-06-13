@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00fAfAfA">
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        style="@style/linMain"
+        android:layout_alignParentBottom="true"
+        android:background="@color/textColor3"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/view_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/item_popupwindows_camera"
+                style="@style/butMain"
+                android:layout_width="match_parent"
+                android:text="拍照" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/view_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/item_popupwindows_Photo"
+                style="@style/butMain"
+                android:layout_width="match_parent"
+                android:text="从相册中选取" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/view_color" />
+
+        <Button
+            android:id="@+id/item_popupwindows_cancel"
+            style="@style/butMain"
+            android:layout_width="match_parent"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/x15"
+    android:paddingTop="@dimen/x15">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x15"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        style="@style/textMain"
+        android:text="学习交流" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x15"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textMin"
+            android:text="主贴："
+            android:textSize="@dimen/tv_20px" />
+
+        <TextView
+            style="@style/textMin"
+            android:layout_marginRight="@dimen/x15"
+            android:text="5万"
+            android:textSize="@dimen/tv_20px" />
+
+        <TextView
+            style="@style/textMin"
+            android:text="回帖："
+            android:textSize="@dimen/tv_20px" />
+
+        <TextView
+            style="@style/textMin"
+            android:text="1万"
+            android:textSize="@dimen/tv_20px" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/textKuang"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x60"
+        android:gravity="center"
+        android:padding="@dimen/x15"
+        android:text="关注" />
+
+</LinearLayout>

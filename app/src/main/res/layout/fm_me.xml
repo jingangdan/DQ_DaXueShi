@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_wight"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linMeTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/me_civ_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            style="@style/linStyle"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textTitle"
+                android:layout_width="match_parent"
+                android:text="金刚蛋" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linMeFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textMain"
+                        android:text="@string/meTop1" />
+
+                    <TextView
+                        style="@style/textTitle"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linMeFans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textMain"
+                        android:text="@string/meTop2" />
+
+                    <TextView
+                        style="@style/textTitle"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linMeFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textMain"
+                        android:text="@string/meTop3" />
+
+                    <TextView
+                        style="@style/textTitle"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="10" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linMeMenu1"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu1" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+    <LinearLayout
+        android:id="@+id/linMeMenu2"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu2" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linMeMenu3"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu3" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+    <LinearLayout
+        android:id="@+id/linMeMenu4"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu4" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linMeMenu5"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu5" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:id="@+id/linMeMenu6"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu6" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linMeMenu7"
+        style="@style/linStyle"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/meMenu7" />
+
+        <ImageView
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+</LinearLayout>

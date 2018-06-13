@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_wight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linExChangeAdr"
+            style="@style/linStyle"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textTitle"
+                        android:layout_alignParentLeft="true"
+                        android:text="收件人：金刚蛋"
+                        android:textSize="@dimen/tv_28px" />
+
+                    <TextView
+                        style="@style/textTitle"
+                        android:layout_alignParentRight="true"
+                        android:text="123456"
+                        android:textSize="@dimen/tv_28px" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/textMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10"
+                    android:text="地址：公共关系协会" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/textTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/x10"
+                android:text="请选择收货地址"
+                android:textSize="@dimen/tv_28px"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linStyle"
+            android:orientation="horizontal"
+            android:padding="@dimen/x30">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_alignParentLeft="true"
+                    android:text="修长城专用抹子"
+                    android:textSize="@dimen/tv_28px" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textMin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x10"
+                        android:text="100积分" />
+
+                    <TextView
+                        style="@style/textTitle"
+                        android:layout_alignParentRight="true"
+                        android:text="x1"
+                        android:textSize="@dimen/tv_28px" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            style="@style/linStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/textMin"
+                android:layout_alignParentLeft="true"
+                android:text="运费" />
+
+            <TextView
+                style="@style/textMin"
+                android:layout_alignParentRight="true"
+                android:text="¥100" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:background="@color/view_color" />
+
+        <RelativeLayout
+            style="@style/linStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/textMin"
+                android:layout_alignParentLeft="true"
+                android:text="商品合计" />
+
+            <TextView
+                style="@style/textMin"
+                android:layout_alignParentRight="true"
+                android:text="¥100" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:background="@color/view_color" />
+
+        <RelativeLayout
+            style="@style/linStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                style="@style/textMin"
+                android:layout_alignParentLeft="true"
+                android:text="积分合计" />
+
+            <TextView
+                style="@style/textMin"
+                android:layout_alignParentRight="true"
+                android:text="¥100" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:background="@color/view_color" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+
+    <LinearLayout
+        style="@style/linStyle"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="总价：100"
+            android:textColor="@color/textColor3" />
+
+        <Button
+            style="@style/butKuang"
+            android:layout_width="wrap_content"
+            android:text="确认兑换" />
+
+    </LinearLayout>
+
+</LinearLayout>

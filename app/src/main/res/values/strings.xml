@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">大学市</string>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="tijiao">提交</string>
+    <string name="tiaoguo">跳过</string>
+
+    <!--主页-->
+    <string name="home1">大学市</string>
+    <string name="home2">机关</string>
+    <string name="home3">浪界</string>
+    <string name="home4">我的</string>
+
+    <!--大学生认证-->
+    <string name="aut1">大学生认证</string>
+    <string name="aut2">请输入您真实的姓名</string>
+    <string name="aut3">请输入您真实的学生证号</string>
+    <string name="aut4">请输入您所属学校</string>
+    <string name="aut5">请输入您所属院系</string>
+    <string name="aut6">请输入您所属班级</string>
+    <string name="aut7">注：提交审核成功后将不得更改信息</string>
+    <string name="aut8">预览进入</string>
+
+    <!--我的-->
+    <string name="meTop1">好友</string>
+    <string name="meTop2">粉丝</string>
+    <string name="meTop3">关注</string>
+    <string name="meMenu1">消息</string>
+    <string name="meMenu2">等级</string>
+    <string name="meMenu3">收藏</string>
+    <string name="meMenu4">我的帖子</string>
+    <string name="meMenu5">积分</string>
+    <string name="meMenu6">草稿</string>
+    <string name="meMenu7">设置</string>
+</resources>

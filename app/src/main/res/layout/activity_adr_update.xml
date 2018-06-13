@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/linMain"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="收货人"
+            android:textSize="@dimen/tv_28px" />
+
+        <EditText
+            style="@style/editStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:hint="请输入收货人" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+    <LinearLayout
+        style="@style/linMain"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="联系电话"
+            android:textSize="@dimen/tv_28px" />
+
+        <EditText
+            style="@style/editStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:hint="请输入" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+    <LinearLayout
+        style="@style/linMain"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="所在地区"
+            android:textSize="@dimen/tv_28px" />
+
+        <EditText
+            style="@style/editStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:hint="请输入收货人" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+    <LinearLayout
+        style="@style/linMain"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textTitle"
+            android:layout_width="0dp"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:text="详细地址"
+            android:textSize="@dimen/tv_28px" />
+
+        <EditText
+            style="@style/editStyle"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="3"
+            android:gravity="top"
+            android:hint="请输入" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+</LinearLayout>

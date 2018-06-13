@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/x15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/x15">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textTitle"
+                android:layout_width="match_parent"
+                android:text="金刚蛋"
+                android:textSize="@dimen/tv_28px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textMin"
+                    android:layout_marginRight="@dimen/x15"
+                    android:text="家里蹲大学" />
+
+                <TextView
+                    style="@style/textMin"
+                    android:text="长城贴瓷砖系" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/textMin"
+            android:text="今天 12:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/x15">
+
+        <TextView
+            style="@style/textTitle"
+            android:layout_width="match_parent"
+            android:text="你佛佛" />
+
+        <TextView
+            style="@style/textMain"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/x15"
+            android:layout_marginTop="@dimen/x15"
+            android:text="你佛佛这夹不道子怎弄？" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/x15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                style="@style/textMain"
+                android:background="@null"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                style="@style/textMain"
+                android:background="@null"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                style="@style/textMain"
+                android:background="@null"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:text="100" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

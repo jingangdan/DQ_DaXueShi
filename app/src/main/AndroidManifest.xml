@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dq.daxueshi">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+
+        <!-- 固定画布尺寸 -->
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1334" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"></meta-data>
+        </provider>
+
+        <!--首页-->
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+
+        </activity>
+
+        <!--启动页-->
+        <activity
+            android:name=".ui.StartActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--引导页-->
+        <activity
+            android:name=".ui.StartPageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--大学生认证-->
+        <activity
+            android:name=".ui.AuthenticationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+
+        <!--首页-发布-->
+        <activity
+            android:name=".ui.PublishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTranslucentTheme" />
+
+        <!--首页-发布-发表-->
+        <activity
+            android:name=".ui.PublishPostActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--测试发布-->
+        <activity
+            android:name=".ui.PublishPostTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--首页-发布-发表-选择板块-->
+        <activity
+            android:name=".ui.PublishPostPlateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--机关-学习交流-->
+        <activity
+            android:name=".ui.ForumActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--搜索-->
+        <activity
+            android:name=".ui.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--首页-帖子详情-->
+        <activity
+            android:name=".ui.ForumDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--我的-消息-->
+        <activity
+            android:name=".ui.MsgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--帖子相关（收藏、我的帖子、草稿）-->
+        <activity
+            android:name=".ui.ForumAboutActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的-积分-->
+        <activity
+            android:name=".ui.IntegralActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的-积分-积分规则-->
+        <activity
+            android:name=".ui.IntegralRuleActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的-积分-积分商城-->
+        <activity
+            android:name=".ui.IntegralShopActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的-积分-积分商城-提交订单（兑换）-->
+        <activity
+            android:name=".ui.ExChangeActivity"
+            android:screenOrientation="portrait" />
+
+        <!--收货地址-->
+        <activity
+            android:name=".ui.AdrListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--收货地址-编辑收货地址（添加、修改）-->
+        <activity
+            android:name=".ui.AdrUpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!--我的-关注（好友、关注、粉丝）-->
+        <activity
+            android:name=".ui.FollowActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的-关注（好友、关注、粉丝）-个人资料-->
+        <activity
+            android:name=".ui.PersonalDateActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的-关注（好友、关注、粉丝）-添加朋友-->
+        <activity
+            android:name=".ui.AddFriendsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+    </application>
+
+</manifest>
