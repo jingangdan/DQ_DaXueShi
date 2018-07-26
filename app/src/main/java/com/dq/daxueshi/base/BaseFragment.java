@@ -12,6 +12,7 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 
 import com.dq.daxueshi.R;
+import com.dq.daxueshi.utils.ToastUtils;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -24,6 +25,10 @@ import java.util.List;
  */
 
 public class BaseFragment extends Fragment {
+
+    public void showMessage(String message) {
+        ToastUtils.getInstance(getActivity()).showMessage(message);
+    }
 
     /**
      * 需要进行检测的权限数组
@@ -55,10 +60,8 @@ public class BaseFragment extends Fragment {
     }
 
     /**
-     *
      * @param permissions
      * @since 2.5.0
-     *
      */
     private void checkPermissions(String... permissions) {
         try {
@@ -84,19 +87,18 @@ public class BaseFragment extends Fragment {
      * @param permissions
      * @return
      * @since 2.5.0
-     *
      */
     private List<String> findDeniedPermissions(String[] permissions) {
         List<String> needRequestPermissonList = new ArrayList<String>();
         if (Build.VERSION.SDK_INT >= 23
-                && getActivity().getApplicationInfo().targetSdkVersion >= 23){
+                && getActivity().getApplicationInfo().targetSdkVersion >= 23) {
             try {
                 for (String perm : permissions) {
                     Method checkSelfMethod = getClass().getMethod("checkSelfPermission", String.class);
                     Method shouldShowRequestPermissionRationaleMethod = getClass().getMethod("shouldShowRequestPermissionRationale",
                             String.class);
-                    if ((Integer)checkSelfMethod.invoke(this, perm) != PackageManager.PERMISSION_GRANTED
-                            || (Boolean)shouldShowRequestPermissionRationaleMethod.invoke(this, perm)) {
+                    if ((Integer) checkSelfMethod.invoke(this, perm) != PackageManager.PERMISSION_GRANTED
+                            || (Boolean) shouldShowRequestPermissionRationaleMethod.invoke(this, perm)) {
                         needRequestPermissonList.add(perm);
                     }
                 }
@@ -109,10 +111,10 @@ public class BaseFragment extends Fragment {
 
     /**
      * 检测是否所有的权限都已经授权
+     *
      * @param grantResults
      * @return
      * @since 2.5.0
-     *
      */
     private boolean verifyPermissions(int[] grantResults) {
         for (int result : grantResults) {
@@ -138,7 +140,6 @@ public class BaseFragment extends Fragment {
      * 显示提示信息
      *
      * @since 2.5.0
-     *
      */
     private void showMissingPermissionDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -168,10 +169,9 @@ public class BaseFragment extends Fragment {
     }
 
     /**
-     *  启动应用的设置
+     * 启动应用的设置
      *
      * @since 2.5.0
-     *
      */
     private void startAppSettings() {
         Intent intent = new Intent(

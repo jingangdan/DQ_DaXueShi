@@ -8,13 +8,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
-import android.support.v4.util.TimeUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +26,6 @@ import android.widget.TextView;
 
 import com.dq.daxueshi.R;
 import com.dq.daxueshi.utils.ScreenManagerUtils;
-import com.dq.daxueshi.utils.StatusUtils;
 import com.dq.daxueshi.utils.ToastUtils;
 import com.zhy.autolayout.AutoLayoutActivity;
 
@@ -82,9 +79,9 @@ public abstract class BaseActivity extends AutoLayoutActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
 
-        StatusUtils.transparencyBar(this); //设置状态栏全透明
-        StatusUtils.StatusBarLightMode(this); //设置白底黑字
-
+//        StatusUtils.transparencyBar(this); //设置状态栏全透明
+//        StatusUtils.StatusBarLightMode(this); //设置白底黑字
+       // StatusUtils.with(this).init(getStatusBarHeight(this));
 
         x.Ext.init(this.getApplication());
         x.Ext.setDebug(BuildConfig.DEBUG);
@@ -146,7 +143,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
             }
         });
 
-        StatusUtils.with(this).setColor(Color.RED).init(getStatusBarHeight(this));
+        //StatusUtils.with(this).setColor(Color.RED).init(getStatusBarHeight(this));
     }
 
     @SuppressLint("WrongConstant")
@@ -201,6 +198,17 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     public void goToActivity(Class clazz) {
         Intent intent = new Intent(this, clazz);
         startActivity(intent);
+    }
+
+    /**
+     * 跳转到制定activity（带result）
+     *
+     * @param clazz
+     * @param code
+     */
+    public void goToActivityForResult(Class clazz, int code) {
+        Intent intent = new Intent(this, clazz);
+        startActivityForResult(intent, code);
     }
 
     /**

@@ -47,6 +47,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tvItemOfficeFollow"
         style="@style/textKuang"
         android:layout_width="@dimen/x100"
         android:layout_height="@dimen/x60"

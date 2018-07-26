@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.dq.daxueshi.Interface.OnClickListener;
 import com.dq.daxueshi.Interface.OnItemClickListener;
 import com.dq.daxueshi.R;
 import com.dq.daxueshi.base.BaseRecyclerViewHolder;
@@ -18,6 +20,7 @@ import com.dq.daxueshi.base.BaseRecyclerViewHolder;
 public class OfficeAdapter extends RecyclerView.Adapter<OfficeAdapter.MyViewHolder> {
     private Context mContext;
     private OnItemClickListener onItemClickListener;
+    private OnClickListener onClickListener;
 
     public OfficeAdapter(Context mContext) {
         this.mContext = mContext;
@@ -27,6 +30,10 @@ public class OfficeAdapter extends RecyclerView.Adapter<OfficeAdapter.MyViewHold
         this.onItemClickListener = onItemClickListener;
     }
 
+    public void setOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         MyViewHolder vh = new MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_office, parent, false));
@@ -34,8 +41,8 @@ public class OfficeAdapter extends RecyclerView.Adapter<OfficeAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, int position) {
-        if(onItemClickListener != null){
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+        if (onItemClickListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -44,7 +51,14 @@ public class OfficeAdapter extends RecyclerView.Adapter<OfficeAdapter.MyViewHold
                 }
             });
         }
-        
+        //关注
+        holder.tvFollow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickListener.onClick(view, position);
+            }
+        });
+
     }
 
     @Override
@@ -53,8 +67,11 @@ public class OfficeAdapter extends RecyclerView.Adapter<OfficeAdapter.MyViewHold
     }
 
     public class MyViewHolder extends BaseRecyclerViewHolder {
+        private TextView tvFollow;
+
         public MyViewHolder(View view) {
             super(view);
+            tvFollow = view.findViewById(R.id.tvItemOfficeFollow);
         }
     }
 }

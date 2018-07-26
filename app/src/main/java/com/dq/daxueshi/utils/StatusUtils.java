@@ -125,10 +125,10 @@ public class StatusUtils {
             Class clazz = window.getClass();
             try {
                 int darkModeFlag = 0;
-                Class layoutParams = Class.forName("android.view.MiuiWindowManager$LayoutParams");
+                Class<?> layoutParams = Class.forName("android.view.MiuiWindowManager$LayoutParams");
                 Field field = layoutParams.getField("EXTRA_FLAG_STATUS_BAR_DARK_MODE");
                 darkModeFlag = field.getInt(layoutParams);
-                Method extraFlagField = clazz.getMethod("setExtraFlags", int.class, int.class);
+                Method extraFlagField = clazz.getMethod ("setExtraFlags", int.class, int.class);
                 if (dark) {
                     extraFlagField.invoke(window, darkModeFlag, darkModeFlag);//状态栏透明且黑色字体
                 } else {

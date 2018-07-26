@@ -49,7 +49,7 @@ public class HomeFragment extends BaseFragment implements ViewPager.OnPageChange
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fm_home, null);
         ButterKnife.bind(this, view);
-        setTopMargin();
+       // setTopMargin();
 
         setFragment(page);
 
@@ -82,7 +82,8 @@ public class HomeFragment extends BaseFragment implements ViewPager.OnPageChange
         noScrollViewPage.setCurrentItem(page);
         noScrollViewPage.setOffscreenPageLimit(titles.length);
 
-        noScrollViewPage.setOnPageChangeListener(this);
+       // noScrollViewPage.setOnPageChangeListener(this);//已过时
+        noScrollViewPage.addOnPageChangeListener(this);
         tabLayout.setupWithViewPager(noScrollViewPage);
     }
 

@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.dq.daxueshi.Interface.OnClickListener;
 import com.dq.daxueshi.Interface.OnItemClickListener;
 import com.dq.daxueshi.R;
 import com.dq.daxueshi.adapter.OfficeAdapter;
@@ -24,6 +25,7 @@ import com.dq.daxueshi.base.ViewHolder;
 import com.dq.daxueshi.bean.TestBean;
 import com.dq.daxueshi.ui.ForumActivity;
 import com.dq.daxueshi.ui.SearchActivity;
+import com.dq.daxueshi.utils.ToastUtils;
 import com.github.jdsjlzx.interfaces.OnLoadMoreListener;
 import com.github.jdsjlzx.interfaces.OnRefreshListener;
 import com.github.jdsjlzx.recyclerview.LRecyclerView;
@@ -57,7 +59,7 @@ public class OfficeFragment extends BaseFragment implements OnRefreshListener, O
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fm_office, null);
         ButterKnife.bind(this, view);
-        setTopMargin();
+        //setTopMargin();
         tvFmTopTitle.setText("机关");
         ibFmTopRight.setVisibility(View.VISIBLE);
         ibFmTopRight.setOnClickListener(new View.OnClickListener() {
@@ -91,17 +93,17 @@ public class OfficeFragment extends BaseFragment implements OnRefreshListener, O
 
         lrvOffice.setLayoutManager(new GridLayoutManager(getActivity(), 3, GridLayoutManager.VERTICAL, false));
         lrvOffice.setAdapter(new LRecyclerViewAdapter(new Adapter(getActivity())));
-//        lRecyclerViewAdapter.setOnItemClickListener(new OnItemClickListener() {
-//            @Override
-//            public void onItemClick(View view, int position) {
-//
-//            }
-//        });
-
         mAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 startActivity(new Intent(getActivity(), ForumActivity.class));
+            }
+        });
+
+        mAdapter.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                showMessage("关注" + position);
             }
         });
 

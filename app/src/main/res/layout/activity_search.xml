@@ -13,8 +13,8 @@
 
         <EditText
             android:id="@+id/et_search_keywords"
+            style="@style/editStyle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:cursorVisible="true"
             android:gravity="left"
@@ -39,13 +39,24 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
     <ListView
         android:id="@+id/lv_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:scrollbars="none">
 
     </ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
 
     <Button
         android:id="@+id/but_clear_history"

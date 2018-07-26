@@ -5,9 +5,10 @@
     android:gravity="center"
     android:background="@color/bg_wight">
 
-    <TextView
+    <ImageView
+        android:scaleType="centerCrop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="我是启动页" />
+        android:src="@mipmap/ic_start"/>
 
 </LinearLayout>

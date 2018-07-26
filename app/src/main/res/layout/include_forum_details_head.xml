@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/bg_wight">
+    android:background="@color/bg_wight"
+    android:orientation="vertical">
 
     <TextView
         style="@style/textTitle"
@@ -63,6 +63,13 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        style="@style/textMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x24"
+        android:text="\t\t千古长城，地迹高悬，人类从未停止过对它的渴望与探索。今日，毕业于家里蹲大学的一批超高材生，展开了对长城拐角有个夹不道子而妨碍了贴瓷砖的这一重大问题的一次前所未有的实地勘察。那是一场空前的、浩大的。。。" />
 
     <LinearLayout
         android:id="@+id/lin_forum_details_content"

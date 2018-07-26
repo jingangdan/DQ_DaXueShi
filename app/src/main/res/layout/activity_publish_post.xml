@@ -12,7 +12,9 @@
 
         <EditText
             style="@style/editStyle"
-            android:hint="描述你的标题（可添加15字）" />
+            android:hint="描述你的标题（可添加15字）"
+            android:maxLength="15"
+            android:padding="@dimen/x15" />
 
     </LinearLayout>
 
@@ -30,13 +32,15 @@
             android:layout_height="wrap_content"
             android:gravity="top"
             android:hint="随便说些什么吧"
-            android:maxLength="5" />
+            android:maxLines="3"
+            android:padding="@dimen/x15" />
 
     </LinearLayout>
 
     <LinearLayout
         style="@style/linStyle"
-        android:gravity="center|left">
+        android:gravity="center|left"
+        android:visibility="gone">
 
         <GridView
             android:id="@+id/gvPublishPost"
@@ -45,10 +49,29 @@
             android:horizontalSpacing="3dp"
             android:numColumns="3"
             android:scrollbars="none"
-            android:verticalSpacing="3dp"
-            android:visibility="gone" />
+            android:verticalSpacing="3dp" />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/view_color" />
+
+    <Button
+        android:id="@+id/butPublishPostImg"
+        style="@style/butMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:padding="@dimen/x15"
+        android:text="选择图片" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPublishPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x15" />
 
     <LinearLayout
         android:id="@+id/linPublicPostPlate"
@@ -66,6 +89,12 @@
             android:layout_weight="1"
             android:text="发表到板块" />
 
+        <TextView
+            style="@style/textMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模块名称" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,10 +106,5 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/x2"
         android:background="@color/view_color" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvPublishPost"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
 </LinearLayout>

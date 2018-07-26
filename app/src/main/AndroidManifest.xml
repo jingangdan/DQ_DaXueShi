@@ -79,13 +79,6 @@
         <!--首页-发布-发表-->
         <activity
             android:name=".ui.PublishPostActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
-
-        <!--测试发布-->
-        <activity
-            android:name=".ui.PublishPostTestActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />

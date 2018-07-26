@@ -37,7 +37,7 @@ public class PublishActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.butPublishText:
                // goToActivity(PublishPostActivity.class);
-                goToActivity(PublishPostTestActivity.class);
+                goToActivity(PublishPostActivity.class);
                 finish();
                 break;
             case R.id.iv_publish_back:

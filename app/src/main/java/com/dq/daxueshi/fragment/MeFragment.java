@@ -54,7 +54,7 @@ public class MeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fm_me, null);
         ButterKnife.bind(this, view);
-        setTopMargin();
+        //setTopMargin();
         return view;
     }
 
